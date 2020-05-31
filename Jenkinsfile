@@ -1,11 +1,10 @@
 #!/usr/bin/env groovy
 node {
     stage('Build') {
-        sh './gradlew clean'
         sh './gradlew build'
     }
     stage('Test') {
-        echo 'Testing....'
+        sh './gradlew clean test'
     }
     stage('Deploy') {
         echo 'Deploying....'
