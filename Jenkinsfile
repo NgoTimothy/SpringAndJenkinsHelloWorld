@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 node {
     stage('Build') {
-        echo 'Building....'
+        gradlew 'build'
     }
     stage('Test') {
         echo 'Testing....'
